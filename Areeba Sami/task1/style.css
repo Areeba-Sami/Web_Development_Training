@@ -1,0 +1,160 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  background-color: #bc95d4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d997d9;
+  padding: 0.5em 1em;
+  box-shadow: 0 2px 5px rgba(163, 69, 135, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #703679;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #43174a;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #7f497f;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(212, 107, 234, 0.8);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+.close-menu {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #d483e0;
+  color: #fff;
+  padding-top: 2em;
+  transition: 0.3s;
+  box-shadow: 2px 0 5px rgba(198, 86, 239, 0.5);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1em 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #8d308d;
+}
+
+.close-sidebar {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: #973c9c;
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  color: #c43880;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+}
