@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Devkit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="logo">Devkit.</div>
     <nav>
-        <div class="logo">Areeba Sami</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <a href="#">Account</a>
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Contact</a>
     </nav>
-    <div class="mobile-menu" id="mobile-menu">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#service">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#feedback">Feedback</a>
+  </header>
+
+  <section class="main">
+    <div class="text-section">
+      <h1>Welcome to <span class="highlight">Devkit.</span><br>Develop anything.</h1>
+      <p>Build a beautiful, modern website with flexible components built from scratch.</p>
+      <div class="buttons">
+        <a href="#" class="btn-primary">View All Pages →</a>
+        <a href="#" class="btn-secondary">Documentation</a>
+      </div>
     </div>
-
-    <div class="sidebar" id="sidebar">
-        <span class="close-sidebar" onclick="toggleSidebar()">&times;</span>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#feedback">Feedback</a></li>
-        </ul>
+    <div class="illustration">
+        <img src="img.jpg" alt="Description of image">
     </div>
-    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('open');
-        }
-
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('open');
-        }
-    </script>
+  </section>
+  <footer>
+    <section class="footer-cta">
+      <h2>Ready to get started?<br><span>Talk to us today</span></h2>
+      <a href="#" class="btn-cta">Get started</a>
+    </section>
+  
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-symbol">
+            <img src="image.png" alt="Devkit logo" height="40">
+          </div>
+          
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>About Savvy</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Get in touch</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Member Discounts</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Not quite ready for Savvy?</h4>
+          <p>Join our online no-code community for free. No spam. Ever.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
 </body>
 </html>
-
